@@ -44,16 +44,22 @@ app.get('/bad', (req,res) => {
 
 app.get('/about', (req,res) => {
     res.render('about.hbs',{
-        pageTitle:'about You',
+        pageTitle:'About You',
     });
 });
 
 app.get('/', (req,res) => {
     res.render('home.hbs', {
-        pageTitle: 'About Page',
+        pageTitle: 'Home Page',
         welcomeMsg:'Welcome To Homepage'
     });
 })
+
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs',{
+        pageTitle:' Projects Page!'
+    });
+});
 
 app.listen(port, () => {
     console.log(`server is up on port: ${port}`); 
